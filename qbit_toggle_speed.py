@@ -32,6 +32,7 @@ def get_state(cookie):
 def toggle(cookie):
     req = request.Request(f"{endpoint}/transfer/toggleSpeedLimitsMode",
                           headers={'Cookie': cookie},
+                          method='POST',
                           )
     return request.urlopen(req)
 
